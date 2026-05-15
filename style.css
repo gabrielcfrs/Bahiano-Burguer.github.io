@@ -1150,13 +1150,6 @@ img {
   display: block;
 }
 
-/* Corrige iframe do mapa */
-#mapas {
-  width: 100% !important;
-  max-width: 100%;
-  border-radius: 16px;
-  display: block;
-}
 
 /* Evita elementos ultrapassarem largura */
 section,
@@ -1178,6 +1171,39 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+   /* =========================================
+   FIX MAPA MOBILE - TELA TRAVADA
+   ========================================= */
+
+#mapas {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 300px;
+  border: 0;
+  border-radius: 16px;
+  display: block;
+}
+
+/* Impede qualquer scroll lateral */
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100%;
+}
+
+/* Garante que nada ultrapasse a tela */
+.contato-info,
+.info-item,
+.container,
+.contato-grid {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Corrige bug do iframe no Android */
+iframe {
+  max-width: 100% !important;
+}
 
 
 }
